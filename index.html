@@ -6,15 +6,18 @@
     <title>iFlow CLI - 强大的AI编程助手</title>
     <meta name="description" content="iFlow CLI 是一款直接在终端中运行的强大 AI 助手。它能够无缝分析代码仓库、执行编程任务、理解上下文需求，通过自动化处理从简单的文件操作到复杂的工作流程，全面提升您的工作效率。">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="icon" href="https://cdn.jsdelivr.net/gh/iflow-ai/iflow-cli@main/assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header class="hero">
+    <header>
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <svg width="40" height="40" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="100%" height="100%" fill="#4f46e5" rx="8" />
+                    <svg class="logo-svg" width="40" height="40" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#5e50f9" rx="8" />
                         <text x="20" y="38" font-family="monospace" font-size="32" fill="white">></text>
                         <text x="60" y="38" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white">iFlow</text>
                     </svg>
@@ -29,21 +32,26 @@
                     <li><a href="#custom-model">自定义模型</a></li>
                 </ul>
             </nav>
-            <div class="hero-content">
-                <h1>强大的AI编程助手</h1>
-                <p>iFlow CLI 是一款直接在终端中运行的强大 AI 助手。它能够无缝分析代码仓库、执行编程任务、理解上下文需求，通过自动化处理从简单的文件操作到复杂的工作流程，全面提升您的工作效率。</p>
-                <div class="cta-buttons">
-                    <a href="#installation" class="btn primary">立即安装</a>
-                    <a href="#quick-start" class="btn secondary">快速开始</a>
-                </div>
-                <div class="screenshot">
-                    <img src="https://cdn.jsdelivr.net/gh/iflow-ai/iflow-cli@main/assets/iflow-cli.jpg" alt="iFlow CLI Screenshot">
-                </div>
-            </div>
         </div>
     </header>
 
     <main>
+        <div class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>强大的AI编程助手</h1>
+                    <p>iFlow CLI 是一款直接在终端中运行的强大 AI 助手。它能够无缝分析代码仓库、执行编程任务、理解上下文需求，通过自动化处理从简单的文件操作到复杂的工作流程，全面提升您的工作效率。</p>
+                    <div class="cta-buttons">
+                        <a href="#installation" class="btn primary">立即安装</a>
+                        <a href="https://github.com/iflow-ai/iflow-cli" target="_blank" class="btn secondary">查看源码</a>
+                    </div>
+                    <div class="screenshot">
+                        <img src="https://cdn.jsdelivr.net/gh/iflow-ai/iflow-cli@main/assets/iflow-cli.jpg" alt="iFlow CLI Screenshot">
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section id="features" class="features">
             <div class="container">
                 <h2>核心特性</h2>
@@ -76,7 +84,7 @@
             <div class="container">
                 <h2>安装</h2>
                 <div class="installation-content">
-                    <div class="requirements">
+                    <div class="requirements card">
                         <h3>系统要求</h3>
                         <ul>
                             <li>操作系统：macOS 10.15+、Ubuntu 20.04+/Debian 10+，或 Windows 10+（使用 WSL 1、WSL 2 或 Git for Windows）</li>
@@ -86,7 +94,7 @@
                             <li>Shell：在 Bash、Zsh 或 Fish 中效果最佳</li>
                         </ul>
                     </div>
-                    <div class="installation-steps">
+                    <div class="installation-steps card">
                         <h3>安装命令</h3>
                         <pre><code class="bash">bash -c "$(curl -fsSL https://cloud.iflow.cn/iflow-cli/install.sh)"</code></pre>
                         <p>此命令会自动为您的终端安装所有必要的依赖项。</p>
@@ -181,31 +189,31 @@ iflow</code></pre>
                 <h2>常见使用场景</h2>
                 <p>iFlow CLI 的功能远不止编程，它能处理各种类型的任务：</p>
                 
-                <div class="use-case-category">
+                <div class="use-case-category card">
                     <h3>🔍 信息查询与规划</h3>
                     <pre><code>> 帮我找到北京评分最高的餐厅，制定一个3天的美食之旅行程。</code></pre>
                     <pre><code>> 搜索最新的 iPhone 价格对比，找到最具性价比的购买方案。</code></pre>
                 </div>
                 
-                <div class="use-case-category">
+                <div class="use-case-category card">
                     <h3>📁 文件管理</h3>
                     <pre><code>> 将我桌面上的文件按文件类型整理到不同的文件夹中。</code></pre>
                     <pre><code>> 批量下载这个网页上的所有图片，并按日期重命名。</code></pre>
                 </div>
                 
-                <div class="use-case-category">
+                <div class="use-case-category card">
                     <h3>📊 数据分析</h3>
                     <pre><code>> 分析这个 Excel 表格中的销售数据，生成简单的图表。</code></pre>
                     <pre><code>> 从这些 CSV 文件中提取客户信息，合并成统一的表格。</code></pre>
                 </div>
                 
-                <div class="use-case-category">
+                <div class="use-case-category card">
                     <h3>🛠️ 开发支持</h3>
                     <pre><code>> 分析这个系统的主要架构组件和模块依赖关系。</code></pre>
                     <pre><code>> 我的请求后出现了空指针异常，请帮我找到问题原因。</code></pre>
                 </div>
                 
-                <div class="use-case-category">
+                <div class="use-case-category card">
                     <h3>⚙️ 工作流程自动化</h3>
                     <pre><code>> 创建一个脚本，定期将我的重要文件备份到云存储。</code></pre>
                     <pre><code>> 编写一个程序，每天下载股票价格并发送邮件通知。</code></pre>
