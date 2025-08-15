@@ -1,4 +1,4 @@
-# iFlow CLI 项目网站
+# iFlow CLI 
 
 这是一个由 iFlow CLI 基于 [README_CN.md](https://github.com/iflow-ai/iflow-cli/blob/main/README_CN.md) 文档创建的iFlow CLI项目网站。
 
