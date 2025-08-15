@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFlow CLI - 强大的AI编程助手</title>
+    <meta name="description" content="iFlow CLI 是一款直接在终端中运行的强大 AI 助手。它能够无缝分析代码仓库、执行编程任务、理解上下文需求，通过自动化处理从简单的文件操作到复杂的工作流程，全面提升您的工作效率。">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/iflow-ai/iflow-cli@main/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#4f46e5" rx="8" />
+                        <text x="20" y="38" font-family="monospace" font-size="32" fill="white">></text>
+                        <text x="60" y="38" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white">iFlow</text>
+                    </svg>
+                    <h1>iFlow CLI</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">核心特性</a></li>
+                    <li><a href="#installation">安装</a></li>
+                    <li><a href="#authentication">身份验证</a></li>
+                    <li><a href="#quick-start">快速开始</a></li>
+                    <li><a href="#use-cases">使用场景</a></li>
+                    <li><a href="#custom-model">自定义模型</a></li>
+                </ul>
+            </nav>
+            <div class="hero-content">
+                <h1>强大的AI编程助手</h1>
+                <p>iFlow CLI 是一款直接在终端中运行的强大 AI 助手。它能够无缝分析代码仓库、执行编程任务、理解上下文需求，通过自动化处理从简单的文件操作到复杂的工作流程，全面提升您的工作效率。</p>
+                <div class="cta-buttons">
+                    <a href="#installation" class="btn primary">立即安装</a>
+                    <a href="#quick-start" class="btn secondary">快速开始</a>
+                </div>
+                <div class="screenshot">
+                    <img src="https://cdn.jsdelivr.net/gh/iflow-ai/iflow-cli@main/assets/iflow-cli.jpg" alt="iFlow CLI Screenshot">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="features" class="features">
+            <div class="container">
+                <h2>核心特性</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🆓</div>
+                        <h3>免费 AI 模型</h3>
+                        <p>通过 <a href="https://docs.iflow.cn/docs">心流开放平台</a> 访问强大的免费 AI 模型，包括 Kimi K2、Qwen3 Coder、DeepSeek v3 等</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔌</div>
+                        <h3>灵活集成</h3>
+                        <p>完全支持 OpenAI 协议的模型提供商</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🖥️</div>
+                        <h3>直观界面</h3>
+                        <p>简洁的终端体验，提供上下文感知的智能辅助</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>开箱即用</h3>
+                        <p>预配置的 MCP 服务器和专业代理协议工作，自动解决复杂问题</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="installation" class="installation">
+            <div class="container">
+                <h2>安装</h2>
+                <div class="installation-content">
+                    <div class="requirements">
+                        <h3>系统要求</h3>
+                        <ul>
+                            <li>操作系统：macOS 10.15+、Ubuntu 20.04+/Debian 10+，或 Windows 10+（使用 WSL 1、WSL 2 或 Git for Windows）</li>
+                            <li>硬件：4GB+ 内存</li>
+                            <li>软件：Node.js 18+</li>
+                            <li>网络：需要互联网连接用于身份验证和 AI 处理</li>
+                            <li>Shell：在 Bash、Zsh 或 Fish 中效果最佳</li>
+                        </ul>
+                    </div>
+                    <div class="installation-steps">
+                        <h3>安装命令</h3>
+                        <pre><code class="bash">bash -c "$(curl -fsSL https://cloud.iflow.cn/iflow-cli/install.sh)"</code></pre>
+                        <p>此命令会自动为您的终端安装所有必要的依赖项。</p>
+                        
+                        <h4>Windows 用户：</h4>
+                        <p>1. 访问 <a href="https://nodejs.org/zh-cn/download">https://nodejs.org/zh-cn/download</a> 下载最新的 Node.js 安装程序</p>
+                        <p>2. 运行安装程序来安装 Node.js</p>
+                        <p>3. 重启终端：CMD 或 PowerShell</p>
+                        <p>4. 运行以下命令来安装 iFlow CLI：</p>
+                        <pre><code class="bash">npm install -g @iflow-ai/iflow-cli</code></pre>
+                        <p>5. 运行以下命令来启动 iFlow CLI：</p>
+                        <pre><code class="bash">iflow</code></pre>
+                        
+                        <p>如果您在中国大陆，可以使用以下步骤安装 iFlow CLI：</p>
+                        <p>1. 访问 <a href="https://cloud.iflow.cn/iflow-cli/nvm-setup.exe">https://cloud.iflow.cn/iflow-cli/nvm-setup.exe</a> 下载最新的 nvm 安装程序</p>
+                        <p>2. 运行安装程序来安装 nvm</p>
+                        <p>3. <strong>重启终端：CMD 或 PowerShell</strong></p>
+                        <p>4. 运行以下命令配置镜像：</p>
+                        <pre><code class="bash">nvm node_mirror https://npmmirror.com/mirrors/node/
+nvm npm_mirror https://npmmirror.com/mirrors/npm/</code></pre>
+                        <p>5. 运行以下命令来安装 Node.js 22：</p>
+                        <pre><code class="bash">nvm install 22</code></pre>
+                        <p>6. 运行以下命令来使用 Node.js 22：</p>
+                        <pre><code class="bash">nvm use 22</code></pre>
+                        <p>7. 运行以下命令来安装 iFlow CLI：</p>
+                        <pre><code class="bash">npm install -g @iflow-ai/iflow-cli</code></pre>
+                        <p>8. 运行以下命令来启动 iFlow CLI：</p>
+                        <pre><code class="bash">iflow</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="authentication" class="authentication">
+            <div class="container">
+                <h2>身份验证</h2>
+                <p>iFlow Cli提供两种身份验证方式：</p>
+                <ol>
+                    <li><strong>推荐方式</strong>：使用 iFlow 原生身份验证</li>
+                    <li><strong>备选方式</strong>：通过 OpenAI 兼容 API 连接</li>
+                </ol>
+                
+                <div class="auth-image">
+                    <img src="https://cdn.jsdelivr.net/gh/iflow-ai/iflow-cli@main/assets/login.jpg" alt="iFlow CLI Login">
+                </div>
+                
+                <h3>获取 API Key的步骤：</h3>
+                <ol>
+                    <li>注册 iFlow 账户</li>
+                    <li>进入个人设置页面或点击<a href="https://iflow.cn/?open=setting">此直达链接</a></li>
+                    <li>在弹出对话框中点击"重置"生成新的 API 密钥</li>
+                </ol>
+                
+                <div class="auth-image">
+                    <img src="https://cdn.jsdelivr.net/gh/iflow-ai/iflow-cli@main/assets/profile-settings.jpg" alt="iFlow Profile Settings">
+                </div>
+                
+                <p>生成密钥后，将其粘贴到终端提示符中即可完成设置。<strong>注意</strong>：在 Windows 的 CMD 或 PowerShell 中，请点击右键进行粘贴。</p>
+            </div>
+        </section>
+
+        <section id="quick-start" class="quick-start">
+            <div class="container">
+                <h2>快速开始</h2>
+                <p>要启动 iFlow CLI，请在终端中导航到您的工作空间并输入以下命令：</p>
+                <pre><code class="bash">iflow</code></pre>
+                
+                <h3>创建新项目</h3>
+                <p>对于新项目，只需描述您想要创建的内容：</p>
+                <pre><code class="bash">cd new-project/
+iflow</code></pre>
+                <p>然后在 iFlow CLI 中输入您的需求：</p>
+                <pre><code>> 使用 HTML 创建一个基于网页的我的世界游戏</code></pre>
+                
+                <h3>处理现有项目</h3>
+                <p>对于现有代码库，建议先使用 <code>/init</code> 命令帮助 iFlow 理解您的项目：</p>
+                <pre><code class="bash">cd project1/
+iflow</code></pre>
+                <p>然后在 iFlow CLI 中使用初始化命令：</p>
+                <pre><code>> /init</code></pre>
+                <p>接着描述您的需求：</p>
+                <pre><code>> 根据 requirement.md 文件中的 PRD 文档分析需求，输出技术文档，然后实现解决方案。</code></pre>
+                
+                <p><code>/init</code> 命令会扫描您的代码库，学习其结构，并创建包含完整文档的 IFLOW.md 文件。</p>
+                
+                <p>关于更多命令的完整列表和使用说明，请查看<a href="./i18/cn/commands.md">这里</a>。</p>
+            </div>
+        </section>
+
+        <section id="use-cases" class="use-cases">
+            <div class="container">
+                <h2>常见使用场景</h2>
+                <p>iFlow CLI 的功能远不止编程，它能处理各种类型的任务：</p>
+                
+                <div class="use-case-category">
+                    <h3>🔍 信息查询与规划</h3>
+                    <pre><code>> 帮我找到北京评分最高的餐厅，制定一个3天的美食之旅行程。</code></pre>
+                    <pre><code>> 搜索最新的 iPhone 价格对比，找到最具性价比的购买方案。</code></pre>
+                </div>
+                
+                <div class="use-case-category">
+                    <h3>📁 文件管理</h3>
+                    <pre><code>> 将我桌面上的文件按文件类型整理到不同的文件夹中。</code></pre>
+                    <pre><code>> 批量下载这个网页上的所有图片，并按日期重命名。</code></pre>
+                </div>
+                
+                <div class="use-case-category">
+                    <h3>📊 数据分析</h3>
+                    <pre><code>> 分析这个 Excel 表格中的销售数据，生成简单的图表。</code></pre>
+                    <pre><code>> 从这些 CSV 文件中提取客户信息，合并成统一的表格。</code></pre>
+                </div>
+                
+                <div class="use-case-category">
+                    <h3>🛠️ 开发支持</h3>
+                    <pre><code>> 分析这个系统的主要架构组件和模块依赖关系。</code></pre>
+                    <pre><code>> 我的请求后出现了空指针异常，请帮我找到问题原因。</code></pre>
+                </div>
+                
+                <div class="use-case-category">
+                    <h3>⚙️ 工作流程自动化</h3>
+                    <pre><code>> 创建一个脚本，定期将我的重要文件备份到云存储。</code></pre>
+                    <pre><code>> 编写一个程序，每天下载股票价格并发送邮件通知。</code></pre>
+                    <p><em>注意：高级自动化任务可以利用 MCP 服务器将您的本地系统工具与企业协作器件集成。</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="custom-model" class="custom-model">
+            <div class="container">
+                <h2>切换自定义模型</h2>
+                <p>iFlow CLI 可以连接任何兼容 OpenAI 的 API。编辑 <code>~/.iflow/settings.json</code> 中的设置文件来更改您使用的模型。</p>
+                
+                <h3>以下是设置文件示例：</h3>
+                <pre><code class="json">{
+  "theme": "Default",
+  "selectedAuthType": "iflow",
+  "apiKey": "your iflow key",
+  "baseUrl": "https://apis.iflow.cn/v1",
+  "modelName": "Qwen3-Coder",
+  "searchApiKey": "your iflow key"
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="github-actions">
+            <div class="container">
+                <h2>GitHub Actions</h2>
+                <p>您也可以在 GitHub Actions 工作流程中使用社区维护的 action：<a href="https://github.com/vibe-ideas/iflow-cli-action">iflow-cli-action</a></p>
+            </div>
+        </section>
+
+        <section class="community">
+            <div class="container">
+                <h2>社区交流</h2>
+                <p>如果您在使用过程中遇到问题，可以直接在 GitHub 页面上提出 Issues。</p>
+                <p>您也可以扫描以下微信群二维码加入社区群进行交流讨论。</p>
+                
+                <div class="wechat-qr">
+                    <img src="https://cdn.jsdelivr.net/gh/iflow-ai/iflow-cli@main/assets/iflow-wechat.jpg" alt="微信群">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 iFlow CLI. All rights reserved.</p>
+            <p>项目地址: <a href="https://github.com/iflow-ai/iflow-cli" target="_blank">GitHub 仓库</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
